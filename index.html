@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <title>>Backbone.js • TodoMVC</title>
 </head>
 
 <body>
-    <section class="todoapp">
-        <header class="header">
-            <h1>todos</h1>
-            <!-- autofocus places marker on placeholder  -->
-            <input class="new-todo" placeholder="What needs to be done?" autofocus>
-        </header>
-        <section class="main">
-            <input class="toggle-all" id="toggle-all" type="checkbox">
-            <label for="toggle-all">Mark all as complete</label>
-            <ul class="todo-list"></ul>
-        </section>
-        <footer class="footer"></footer>
-    </section>
-    <footer class="info">
-        <p>Double-click to edit a todo</p>
-        <p>Written by Addy Osmani</p>
-        <p>Part of TodoMVC</p>
-    </footer>
-</body>
 
+
+    <main>
+
+        <header>
+            <h1>Todos</h1>
+            <form id="input-form">
+                <input 
+                type="text" 
+                name="input" 
+                id="text-input" 
+                placeholder="What needs to be done? " 
+                autofocus>
+            </form>
+
+        </header>
+
+        <div id="ListContainer">
+            <div class="content-container">
+                <div class="content">
+                    <input type="checkbox" name="completed-task" id="task-checkbox">
+                    <label for="content1">content test 1</label>
+                    <button class="delete-button">x</button>
+                </div>
+                <div class="content">
+                    <input type="checkbox" name="completed-task" id="task-checkbox">
+                    <label for="content1">content test 1</label>
+                    <button class="delete-button">x</button>
+                </div>
+                <div class="content">
+                    <input type="checkbox" name="completed-task" id="task-checkbox">
+                    <label for="content1">content test 1</label>
+                    <button class="delete-button">x</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="action-container">
+           <div class="span-container">
+            <p><span 
+                id="number-of-items" 
+                style="font-weight: bold;"
+                >0</span> 
+                items left
+            </p>
+           </div>
+
+           <div class="all-active-container">
+            <button class="all-button">all</button>
+            <button class="active-button">active</button>
+           </div>
+
+           <div class="completed-button">
+            <button>completed</button>
+           </div>
+
+
+        </div>
+
+
+    </form>
+
+    </main>
+    
+</body>
 </html>
