@@ -16,6 +16,7 @@
         <header>
             <h1>Todos</h1>
             <form id="input-form">
+                <button type="menu" id="menu-button" style="height: 20px; background-color: blueviolet;">\/</button>
                 <input 
                 type="text" 
                 name="input" 
@@ -26,27 +27,11 @@
 
         </header>
 
-        <div id="ListContainer">
-            <div class="content-container">
-                <div class="content">
-                    <input type="checkbox" name="completed-task" id="task-checkbox">
-                    <label for="content1">content test 1</label>
-                    <button class="delete-button">x</button>
-                </div>
-                <div class="content">
-                    <input type="checkbox" name="completed-task" id="task-checkbox">
-                    <label for="content1">content test 1</label>
-                    <button class="delete-button">x</button>
-                </div>
-                <div class="content">
-                    <input type="checkbox" name="completed-task" id="task-checkbox">
-                    <label for="content1">content test 1</label>
-                    <button class="delete-button">x</button>
-                </div>
-            </div>
-        </div>
+       <ul id="list">
 
-        <div id="action-container">
+       </ul>
+
+        <div id="action-container" style="display:none"; >
            <div class="span-container">
             <p><span 
                 id="number-of-items" 
@@ -56,13 +41,10 @@
             </p>
            </div>
 
-           <div class="all-active-container">
+           <div class="btn-container">
             <button class="all-button">all</button>
             <button class="active-button">active</button>
-           </div>
-
-           <div class="completed-button">
-            <button>completed</button>
+            <button class="completed">completed</button>
            </div>
 
 
@@ -72,6 +54,7 @@
     </form>
 
     </main>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>
