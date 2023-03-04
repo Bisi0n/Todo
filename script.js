@@ -12,14 +12,13 @@ let tasks = [];
 
   input.addEventListener('keydown', function(event) {
     
-
     // keyCode 13 refers to the "Enter" key on keyboard.
     if (event.keyCode === 13 && !input.textContent) {
 
       event.preventDefault();
       actContainer.style.display = 'block';
 
-      
+
       let newTask = {
         text: input.value,
         completed: false
@@ -29,7 +28,7 @@ let tasks = [];
 
       createListItem(newTask);
 
-      numberOfItems.value = countRemainingTasks();
+      countRemainingTasks();
     }
   });
 
@@ -53,7 +52,10 @@ function createListItem(Task) {
   let deleteButton = document.createElement('button')
   deleteButton.type = 'button'
   deleteButton.style.height = '15px'
-  deleteButton.textContent = 'X'
+  deleteButton.textContent = '❌'
+  deleteButton.addEventListener('click', e => {
+    deleteItem(Task);
+  });
 
   label.append(checkbox, Task.text, deleteButton)
   item.append(label)
@@ -65,10 +67,18 @@ function createListItem(Task) {
 function countRemainingTasks() {
 
   let remainingTasks = tasks.filter(task => task.completed === false)
-
-  return remainingTasks.length
+  numberOfItems.innerHTML = remainingTasks.length;
+  updateList();
 }
 
-function deletedItems(){
+function deleteItem(task){
 
+    tasks.splice(tasks.indexOf(task), 1);
+
+    countRemainingTasks();
+}
+
+function updateList(){
+    list.innerHTML = '';
+    tasks.forEach(task => createListItem(task));
 }
