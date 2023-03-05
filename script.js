@@ -19,7 +19,16 @@ function countRemainingTasks() {
   } else {
     actContainer.style.display = 'block';
   }
+
+  // Add this condition to show/hide the clear completed button
+  let completedTasks = tasks.filter(task => task.completed === true);
+  if (completedTasks.length > 0) {
+    clearCompleted.style.display = 'inline-block';
+  } else {
+    clearCompleted.style.display = 'none';
+  }
 }
+
 
 form.onsubmit = function (event) {
   event.preventDefault();
