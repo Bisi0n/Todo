@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todolist</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-
+    <header>
+        <h1>todos</h1>
+        <form id="input-form">
+            <button type="menu" id="toggle-all-button" style="height: 20px;">🔽</button>
+            <input type="text" name="input" id="text-input" placeholder="What needs to be done? " autofocus>
+        </form>
+    </header>
 
     <main>
+        <ul>
+            <li id="list">
 
-        <header>
-            <h1>Todos</h1>
-            <form id="input-form">
-                <button type="menu" id="menu-button" style="height: 20px;">🔽</button>
-                <input 
-                type="text" 
-                name="input" 
-                id="text-input" 
-                placeholder="What needs to be done? " 
-                autofocus>
-            </form>
-
-        </header>
-
-       <ul id="list">
-
-       </ul>
-
-        <div id="action-container" style="display:none"; >
-           <div class="span-container">
-            <p><span 
-                id="number-of-items" 
-                style="font-weight: bold;"
-                ></span> 
-                items left
-            </p>
-           </div>
-
-           <div class="button-container">
-            <button class="all-button">all</button>
-            <button class="active-button">active</button>
-            <button class="completed">completed</button>
-           </div>
-
-
-        </div>
-
-
-    </form>
-
+            </li>
+        </ul>
     </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <div id="action-container" style="display:none" ;>
+            <div class="span-container">
+                <p><span id="number-of-items" style="font-weight: bold;"></span>
+                    items left
+                </p>
+            </div>
+
+            <div class="button-container">
+                <button class="all-button">All</button>
+                <button class="active-button">Active</button>
+                <button class="completed-button">Completed</button>
+                <button class="clear-completed">Clear Completed</button>
+            </div>
+        </div>
+        <footer>
+            <p>Don't double-click to edit a todo </p>
+            <p>Written by <a href="https://www.linkedin.com/in/mohammed-jafari-693576222/">Jafari</a> and <a href="https://www.linkedin.com/in/abdi-rahman-mohamed-307678239/">Abdi</a></p>
+            <p>Part of TodoMVC</p>
+        </footer>
+
+    </footer>
 </body>
+
 </html>
