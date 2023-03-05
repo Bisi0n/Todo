@@ -12,22 +12,24 @@ let clearCompleted = document.querySelector('.clear-completed');
 let tasks = [];
 
 function countRemainingTasks() {
-  let remainingTasks = tasks.filter(task => task.completed === false);
+  let remainingTasks = tasks.filter(task => !task.completed);
   numberOfItems.textContent = remainingTasks.length;
-  if (remainingTasks.length === 0) {
+
+  if (tasks.length === 0) {
     actContainer.style.display = 'none';
+    clearCompleted.style.display = 'none';
   } else {
     actContainer.style.display = 'block';
-  }
 
-  // show/hide the clear completed button
-  let completedTasks = tasks.filter(task => task.completed === true);
-  if (completedTasks.length > 0) {
-    clearCompleted.style.display = 'inline-block';
-  } else {
-    clearCompleted.style.display = 'none';
+    let completedTasks = tasks.filter(task => task.completed);
+    if (completedTasks.length > 0) {
+      clearCompleted.style.display = 'inline-block';
+    } else {
+      clearCompleted.style.display = 'none';
+    }
   }
 }
+
 
 
 form.onsubmit = function (event) {
