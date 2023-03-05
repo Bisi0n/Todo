@@ -20,7 +20,7 @@ function countRemainingTasks() {
     actContainer.style.display = 'block';
   }
 
-  // Add this condition to show/hide the clear completed button
+  // show/hide the clear completed button
   let completedTasks = tasks.filter(task => task.completed === true);
   if (completedTasks.length > 0) {
     clearCompleted.style.display = 'inline-block';
@@ -32,7 +32,7 @@ function countRemainingTasks() {
 
 form.onsubmit = function (event) {
   event.preventDefault();
-  if (!input.value) {
+  if (!input.value.trim()) {
     return;
   }
   actContainer.style.display = 'block';
@@ -45,6 +45,31 @@ form.onsubmit = function (event) {
   countRemainingTasks();
   input.value = '';
 };
+
+//Enter checks all tasks fix
+input.onkeydown = function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    if (!input.value.trim()) {
+      return;
+    }
+    actContainer.style.display = 'block';
+    let newTask = {
+      text: input.value,
+      completed: false
+    };
+    tasks.push(newTask);
+    createListItem(newTask);
+    countRemainingTasks();
+    input.value = '';
+  }
+};
+
+
+
+
+
+
 
 allButton.addEventListener('click', function (event) {
   updateList();
