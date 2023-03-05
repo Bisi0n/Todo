@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bisi0n/Todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bisi0n/Todo/issues"
+  },
+  "homepage": "https://github.com/Bisi0n/Todo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2"
+  }
+}

@@ -68,11 +68,6 @@ input.onkeydown = function (event) {
 };
 
 
-
-
-
-
-
 allButton.addEventListener('click', function (event) {
   updateList();
 });
