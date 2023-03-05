@@ -17,3 +17,28 @@ test('Task addition', async ({ page }) => {
   //check result
   await expect(taskList).toHaveText('food❌');
 });
+
+
+test('Add task-0items left', async ({ page }) => {
+  await page.goto('http://127.0.0.1:5500/');
+
+  //locate input
+  let userInput = await page.locator('#text-input');
+
+  //fill input
+  await userInput.fill('drink');
+  await page.keyboard.press('Enter');
+
+  //locate items left
+  let itemCounter = await page.locator('#number-of-items');
+
+  await expect(itemCounter).toHaveText('1');
+
+  //check task
+  let taskCheck = await page.locator('#list');
+
+  await taskCheck.click(); //click to check task
+
+  await expect(itemCounter).toHaveText('1')
+
+});
