@@ -1,60 +1,93 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@md-jafari 
+Bisi0n
+/
+Todo
+Public
+Fork your own copy of Bisi0n/Todo
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Todo/index.html
+@Bisi0n
+Bisi0n playwright addition
+Latest commit a0744dd yesterday
+ History
+ 2 contributors
+@md-jafari@Bisi0n
+54 lines (46 sloc)  1.64 KB
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todolist</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <h1>todos</h1>
+        <form id="input-form">
 
+            <label id="toggle-all">🔽</label>
+            <input type="text" name="input" id="text-input" placeholder="What needs to be done? " autofocus>
+
+        </form>
+    </header>
 
     <main>
+        <ul id="list">
 
-        <header>
-            <h1>Todos</h1>
-            <form id="input-form">
-                <button type="menu" id="menu-button" style="height: 20px;">🔽</button>
-                <input 
-                type="text" 
-                name="input" 
-                id="text-input" 
-                placeholder="What needs to be done? " 
-                autofocus>
-            </form>
-
-        </header>
-
-       <ul id="list">
-
-       </ul>
-
-        <div id="action-container" style="display:none"; >
-           <div class="span-container">
-            <p><span 
-                id="number-of-items" 
-                style="font-weight: bold;"
-                ></span> 
-                items left
-            </p>
-           </div>
-
-           <div class="button-container">
-            <button class="all-button">all</button>
-            <button class="active-button">active</button>
-            <button class="completed">completed</button>
-           </div>
-
-
-        </div>
-
-
-    </form>
-
+        </ul>
     </main>
 
-    <script src="script.js"></script>
+    
+        <section id="action-container">
+                <p class="items"><span id="number-of-items"></span>items left</p>
+                <button class="all-button">All</button>
+                <button class="active-button">Active</button>
+                <button class="completed-button">Completed</button>
+                <button class="clear-completed">Clear Completed</button>
+        </section>
+        <footer>
+            <p>Don't double-click to edit a todo </p>
+            <p>Written by <a href="https://www.linkedin.com/in/mohammed-jafari-693576222/">Jafari</a> and <a href="https://www.linkedin.com/in/abdi-rahman-mohamed-307678239/">Abdi</a></p>
+            <p>Part of TodoMVC</p>
+        </footer>
+
+    
 </body>
+
 </html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Todo/index.html at main · Bisi0n/Todo
