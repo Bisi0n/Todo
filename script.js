@@ -19,7 +19,7 @@ function countRemainingTasks() {
     actContainer.style.display = 'none';
     clearCompleted.style.display = 'none';
   } else {
-    actContainer.style.display = 'inline-block';
+    actContainer.style.display = 'flex';
 
     let completedTasks = tasks.filter(task => task.completed);
     if (completedTasks.length > 0) {
@@ -31,8 +31,6 @@ function countRemainingTasks() {
 }
 
 
-
-
 //Enter checks all tasks fix
 input.onkeydown = function (event) {
   if (event.key === 'Enter') {
@@ -40,7 +38,7 @@ input.onkeydown = function (event) {
     if (!input.value.trim()) {
       return;
     }
-    actContainer.style.display = 'block';
+    actContainer.style.display = 'flex';
     let newTask = {
       text: input.value,
       completed: false
@@ -78,8 +76,10 @@ clearCompleted.addEventListener('click', function (event) {
 function createListItem(task) {
   let item = document.createElement('li');
   let label = document.createElement('label');
+  label.className = 'label'
   let checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
+  checkbox.className = 'ckeckbox'
   checkbox.checked = task.completed;
   checkbox.addEventListener('change', function (event) {
     task.completed = checkbox.checked;
