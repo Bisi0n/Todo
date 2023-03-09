@@ -99,7 +99,9 @@ li {
     right: 5%;
     top: 30%;
     display: none;
-
+}
+li .delete-mark::before {
+    content: '❌';
 }
 
 .ckeckbox:checked+label {
