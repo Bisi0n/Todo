@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
 }
-
-
 h1 {
     text-align: center;
     color: rgba(175, 47, 47, 0.15);
@@ -12,7 +10,6 @@ h1 {
     font-size: 100px;
     font-weight: 100;
 }
-
 body{
     display: flex;
     flex-direction: column;
@@ -21,6 +18,9 @@ body{
     background:#f5f5f5;
     font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+
+
 #input-form{
     display: flex;
     flex-direction: row;
@@ -51,7 +51,6 @@ input:focus, textarea:focus, select:focus{
     margin-bottom: 17.5px;
 }
 
-
 #list li{
     background-color: white;
     min-height: 70px;
@@ -63,24 +62,22 @@ input:focus, textarea:focus, select:focus{
 
 #list input{
     position: absolute;
-    left: 1%;
+    left: 2%;
+    width: 5%;
     height: 100%;
-    
 }
 
 #list label {
     position: absolute;
-    left: 5%;
-    top: 20px;
+    left: 10%;
     font-size: 25px;
-    height: 100%;
+    margin-top: 20px;
 
 }
 
 li .delete-mark::before {
     content: '❌';
 }
-
 .delete-mark{
     background-color: white;
     border: none;
@@ -92,24 +89,27 @@ li .delete-mark::before {
 }
 
 
+
 #action {
     display: flex;
 }
+
 #action-container {
+    display: none;
     width: 550px;
     height: 50px;
-    display: flex;
-    flex-direction: row;
     background-color: white;
     border-top: 2px solid #f5f5f5;
     position: relative;
 }
+
 
 .items{
     position: absolute;
     top: 15px;
     left: 20px;
 }
+
 .items span{
     font-weight: bold;
 }
@@ -119,16 +119,19 @@ li .delete-mark::before {
     left: 30%;
     top: 15px;
 }
+
 .active-button {
     position: absolute;
     left: 35%;
     top: 15px;
 }
+
 .completed-button {
     position: absolute;
     left: 44%;
     top: 15px;
 }
+
 .clear-completed {
     position: absolute;
     top: 15px;
@@ -138,6 +141,18 @@ li .delete-mark::before {
 #action-container button{
     border: none;
     background-color: white;
+}
+
+
+
+
+footer{
+    width: 550px;
+    font-size: 10px;
+    text-align: center;
+    color: gray;
+    margin-top: 4%;
+    margin-bottom: 1%;
 }
 
 
