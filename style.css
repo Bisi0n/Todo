@@ -75,19 +75,28 @@ input:focus, textarea:focus, select:focus{
 
 }
 
-li .delete-mark::before {
-    content: '❌';
+li {
+    position: relative; 
 }
-.delete-mark{
+
+li:hover .delete-mark {
+    display: flex; /* Show mark when hovering */
+}
+
+.delete-mark {
     background-color: white;
     border: none;
     box-shadow: none;
+    display: none;
     position: absolute;
+    top: 50%;
     right: 20px;
-    top: 17px;
-    
+    transform: translateY(-50%);
 }
 
+li .delete-mark::before {
+    content: '❌';
+}
 
 
 #action {
