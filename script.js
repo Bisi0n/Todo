@@ -35,12 +35,6 @@ function countRemainingTasks() {
 input.onkeydown = function (event) {
   if (event.key === 'Enter') {
     event.preventDefault();
-    //display buttons
-
-    activeButton.style.display = 'flex';
-    allButton.style.display = 'flex';
-    completedButton.style.display = 'flex';
-
     if (!input.value.trim()) {
       return;
     }
