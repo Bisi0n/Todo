@@ -23,7 +23,7 @@ function countRemainingTasks() {
 
     let completedTasks = tasks.filter(task => task.completed);
     if (completedTasks.length > 0) {
-      clearCompleted.style.display = 'inline-block';
+      clearCompleted.style.display = 'grid';
     } else {
       clearCompleted.style.display = 'none';
     }

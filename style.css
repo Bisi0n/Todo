@@ -21,7 +21,6 @@ body{
 }
 
 
-
 #input-form{
     display: grid;
     grid-template:
@@ -65,7 +64,7 @@ input:focus, textarea:focus, select:focus{
 #list li{
     display: grid;
     grid-template:
-       'a b c' ;
+       'a b c'/ 10% ;
     background-color: white;
     min-height: 70px;
     width: 550px;
@@ -75,28 +74,32 @@ input:focus, textarea:focus, select:focus{
 }
 
 #list input{
-   
+   height: 50%;
+   margin-top: auto;
+   margin-bottom: auto;
 }
 
 #list label {
-    
     font-size: 25px;
-    word-wrap: break-word;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
+
 li:hover .delete-mark{
-    display: flex;
+    display: grid;
 }
 
 
 .delete-mark{
+    display: none;
     background-color: white;
     border: none;
     box-shadow: none;
-    display: none;
-    right: 5%;
-    top: 30%;
-    display: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 60% ;
+    
 }
 li .delete-mark::before {
     content: '❌';
@@ -106,9 +109,8 @@ li .delete-mark::before {
     text-decoration: line-through;
 }
 
-
 #action-container {
-    display: grid;
+    display: none;
     grid-template:
         'a b c' ;
     width: 550px;
@@ -190,8 +192,11 @@ footer{
     #input-form{
         width: 300px;
     }
-    .input-container{
-        font-size: 20px ;
+    .input-container input{
+        font-size: 20px;
+    }
+    .label-container label {
+        font-size: 25px;
     }
     #list li{
         width: 300px;
