@@ -19,7 +19,7 @@ function countRemainingTasks() {
     actContainer.style.display = 'none';
     clearCompleted.style.display = 'none';
   } else {
-    actContainer.style.display = 'flex';
+    actContainer.style.display = 'grid';
 
     let completedTasks = tasks.filter(task => task.completed);
     if (completedTasks.length > 0) {
@@ -38,7 +38,7 @@ input.onkeydown = function (event) {
     if (!input.value.trim()) {
       return;
     }
-    actContainer.style.display = 'flex';
+    actContainer.style.display = 'grid';
     let newTask = {
       text: input.value,
       completed: false
