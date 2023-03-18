@@ -1,3 +1,3 @@
 # Todo
 
-TodoMVC Blackbone written on plain JavaScript
+TodoMVC Blackbone written on plain JavaScript. No framework/library used.
