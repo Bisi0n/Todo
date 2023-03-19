@@ -24,7 +24,7 @@ body{
 #input-form{
     display: grid;
     grid-template:
-       'a b'/ 10%;
+       'a b' 100%/ 10% 90%;
     background-color: white;
     height: 70px;
     width: 550px;
@@ -33,20 +33,18 @@ body{
 .input-container input{
     font-size: 25px;
     width: 100%;
-    height: 70px;
+    height: 100%;
     border: none;
 }
 .label-container label {
-    font-size: 30px;
-    margin-right: 10px;
+    font-size: 25px;
 }
 .label-container {
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: auto;
+    margin-left: auto ;
+    margin-right: auto;
 }
-
-
 
 input:focus, textarea:focus, select:focus{
     outline: none;
@@ -57,39 +55,33 @@ input:focus, textarea:focus, select:focus{
     margin-bottom: auto;
 }
 
-
-
-
-
 #list li{
     display: grid;
     grid-template:
-       'a b c'/ 10% ;
+       'a b c' 100%/ 10% 80% 5%;
     background-color: white;
     min-height: 70px;
     width: 550px;
     border-top: 2px solid #f5f5f5;
-    list-style-type: none;
-    
+    list-style-type: none;    
 }
 
 #list input{
-   height: 50%;
+   height: 25px;
    margin-top: auto;
-   margin-bottom: auto;
+   margin-bottom: auto;jfdnsgj
 }
 
 #list label {
     font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
+    word-wrap: break-word;
 }
-
 
 li:hover .delete-mark{
     display: grid;
 }
-
 
 .delete-mark{
     display: none;
@@ -98,9 +90,8 @@ li:hover .delete-mark{
     box-shadow: none;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 60% ;
-    
 }
+
 li .delete-mark::before {
     content: '❌';
 }
@@ -119,18 +110,22 @@ li .delete-mark::before {
     border-top: 2px solid #f5f5f5;
     text-align: center;
 }
+
 .items-container{
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .clear-container {
     margin-top: auto;
     margin-bottom: auto;   
 }
+
 .button-container {
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .button-container button{
     margin-left: 3%;
 }
@@ -143,7 +138,6 @@ li .delete-mark::before {
     border: none;
     background-color: white;
 }
-
 
 footer{
     width: 550px;
