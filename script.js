@@ -98,7 +98,7 @@ function createListItem(task) {
 }
 
 function updateList(showCompleted = null) {
-  list.innerHTML = '';
+  list.textContent = '';
   let filteredTasks = tasks;
   if (showCompleted !== null) {
     filteredTasks = tasks.filter(function (task) {
